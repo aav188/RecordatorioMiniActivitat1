@@ -19,20 +19,23 @@ import com.example.recordatoriominiactivitat1.ui.theme.RecordatorioMiniActivitat
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContent {
             RecordatorioMiniActivitat1Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+                    MyApp(modifier=Modifier.fillMaxSize())
+
                 }
             }
         }
     }
-}
 
+@Composable
+fun MyApp(modifier: Modifier = Modifier){
+    Surface(modifier = modifier , color = MaterialTheme.colorScheme.background) {
+        Greeting("Android")
+    }
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Surface(color = MaterialTheme.colorScheme.primary) {
@@ -43,7 +46,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )                                                  }
 }
 
-@Preview(showBackground = true, name = "Text Preview")
+@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     RecordatorioMiniActivitat1Theme {
