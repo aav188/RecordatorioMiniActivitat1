@@ -38,7 +38,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, name = "Text Preview")
 @Composable
 fun GreetingPreview() {
     RecordatorioMiniActivitat1Theme {
